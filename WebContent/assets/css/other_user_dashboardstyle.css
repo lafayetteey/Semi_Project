@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+
+
+.grid_4{
+   float:left;
+   
+}
+
+
+
+.locations {
+  padding: 30px;
+  text-align: center;
+}
+.locations .avatar {
+  border-radius: 50%;
+}
+
+/*other user dashboard*/
+ul {
+    display: block;
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.review_product_image {
+    border-width: 1px;
+    display: inline;
+    float: center;
+    margin-left : -3%;
+    width: 53px;
+}
+
+.review_container { 
+	margin-top : -7%;
+	margin-left : 5%;
+}
+.label {
+	float : left;
+}
+
+.vertical_bottom {
+	border-bottom : 1px solid lightgray;
+	margin-top : 2%;
+	margin-left : -3%;
+	width : 102%;
+}
+
+.book-rate {
+	margin-top:-18%;
+}
+
+table {
+	margin-left : 8%;
+	padding-top : -10%;
+}

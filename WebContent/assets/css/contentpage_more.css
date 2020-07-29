@@ -1,0 +1,125 @@
+/* reset */
+    *, :after, :before, div, article, aside, footer, header, main, nav, section {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+    body {min-width:1024px;font-weight:400;font-size:16px;line-height:1.5; background-color:#f1f1f1; color:#323232;-webkit-text-size-adjust:none;-ms-text-size-adjust:none}
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button, figure {margin:0;padding:0}
+    fieldset {min-width:auto;border:0 none}
+    img {height:auto;border:0 none;vertical-align:top}
+    dl, ul, ol, menu, li {list-style:none}
+    blockquote, q {quotes:none}
+    blockquote:before, blockquote:after, q:before, q:after {content:'';content:none}
+    input, select, textarea {font-size:16px;font-family:"Nanum Gothic", Dotum, Hevetica, Arial, sans-serif;vertical-align:middle;outline:none}
+    button {border:0 none;background-color:transparent;cursor:pointer}
+    table {-webkit-border-collapse:collapse;border-spacing:0}
+    caption, legend {font-size:0;line-height:0;visibility:hidden}
+    input:checked[type='checkbox'] {background-color:gray;-webkit-appearance:checkbox}
+    input::-ms-clear, input::-ms-reveal {display:none;width:0;height:0}
+    input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {display:none}
+    input::-moz-placeholder {color:#c8c8c8}
+    input::-webkit-input-placeholder {color:#c8c8c8}
+    input:-ms-input-placeholder {color:#c8c8c8}
+    input[disabled], input[readonly] {background-color:#f1f1f1;color:#222;-webkit-text-fill-color:#222;opacity:1}
+    button, input, textarea, select {-webkit-appearance:none;-webkit-border-radius:0;border-radius:0}
+    select::-ms-expand {display:none}
+    section, header, footer, main, article, aside, nav, figcaption, figure {display:block}
+    address, caption, cite, code, dfn, em, var, i {font-style:normal;font-weight:400}
+    h1, h2, h3, h4, h5, h6 {font-weight:600;font-size:16px;line-height:1.25;font-family:"Nanum Gothic", Dotum, Hevetica, Arial, sans-serif;word-break:keep-all}
+    strong {font-weight:600}
+    a {color:#222;text-decoration:none}
+    a:active, a:hover {text-decoration:none}
+    input[type="text"], input[type="password"], input[type="search"] {height:30px;padding:0 10px;border:1px solid #b4b4b4;font-size:13px;background-color:#fff}
+    textarea {width:100%;padding:10px;resize:none;border:1px solid #b4b4b4}
+    hr {display:none}
+    mark {background-color:transparent;color:inherit}
+    i {vertical-align:middle}
+
+
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+html,body{font-family: nanumgothic !important;}
+
+.main{
+    width:1200px; 
+    min-height: 1000px;
+    margin: 0 auto;
+    padding: 44px 24px;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    box-sizing: border-box;
+}
+
+
+
+body {
+	background: #f1f1f1;
+}
+
+.starRev {
+	margin-top: 1%;
+}
+
+.starR{
+  background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat right 0;
+  background-size: auto 100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.starR.on{background-position:0 0;}
+
+/* 리뷰작성 */
+.form-body{width: 80%; margin: 0 auto;}
+
+label{display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;}
+.form-control{
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-group {margin-bottom: 15px; margin-top: 15px;}
+.reveiew-form h3{font-weight: bold; border-bottom: 1px solid #eee; padding-bottom: 10px;} 
+
+/* 리뷰리스트 */
+.main .wrapper{padding: 3em 0 4em 0;}
+.review_list{width: 100%; }
+.review_list h1{font-weight: bold; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.review_list .review_box {width: 80%; border-bottom: 1px solid #ccc; height: auto; padding-bottom: 20px; margin: 20px auto 0px;}
+.review_box .writer{
+	width: 100%; 
+	font-size: 15px; 
+	margin-bottom: 5px; 
+	padding-top: 5px;
+	cursor : pointer;
+	} 
+.review_box .date_write{
+	width: 100px; 
+	font-size: 13px; 
+	float: right;	
+/* 	padding-top: 10px;
+ */}
+.review_box .content{
+	font-size: 25px; 
+	margin-bottom: 7px; 
+}
+.review_box .content_box{
+	padding-top: 10px;
+	
+}
+.review_box .star{float: left; margin-right: 5px;}
+.review_box .grade{font-size: 13px;}

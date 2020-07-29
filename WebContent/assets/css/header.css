@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+:root {
+  --body-bg-color: #e5f4f9;
+  --body-color-light: #8b939c;
+  --body-font: "Roboto", sans-serif;
+  --page-bg-color: #f2f5f7;
+  --body-color: #3d4954;
+  --border-color: #b8bec3;
+  --placeholder: #ccd0d2; 
+}
+#seethedetail_reddead{
+	text-decoration: none;
+}
+/*로그인창팝업 시 뒷 배경 흐리게*/
+#mask {
+	position: absolute;
+	z-index: 9000;
+	background-color: #000;
+	display: none;
+	left: 0;
+	top: 0;
+}
+
+
+
+/*로그인 팝업 창 */
+.login-popup {
+  display: none;
+  position: absolute;
+  bottom: 30%;
+  right: 40%;
+  border: 3px solid #f1f1f1;
+  z-index:10001;
+  border-radius : 5px;
+  box-shadow: -2px 6px 19px 0px #7f818e;
+}
+
+.login-popup {
+  display: none;
+  position: absolute;
+  bottom: 30%;
+  right: 40%;
+  border: 3px solid #f1f1f1;
+  border-radius : 5px;
+  z-index:10001;
+  box-shadow: -2px 6px 19px 0px #7f818e;
+}
+
+input.kakao-api {
+	background : url("https://library.kissclipart.com/20180829/e/kissclipart-logo-facebook-circle-clipart-social-media-computer-122dbd598c283ddf.jpg") no-repeat;
+	padding: 15px;
+    margin: 5px 0 22px 0;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius : 5px;
+  height: 50px
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.form-container input[type=button] {
+  background : #4285F4;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius : 5px;
+}
+
+/*회원 가입 폼 */
+.signup-popup {
+  display: none;
+  position: absolute;
+  bottom: 7%;
+  right: 40%;
+  border: 3px solid #f1f1f1;
+  z-index:10001;
+  border-radius : 5px;
+  box-shadow: -2px 6px 19px 0px #7f818e;
+}
+
+.sign-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.sign-container input[type=text], .sign-container input[type=password] , .sign-container input[type=email] , .sign-container input[type=tel] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.sign-container input[type=button] {
+  background : #4285F4;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius : 5px;
+}
+
+.sign-container input[type=button]:hover {
+	opacity : 1;
+}
+
+.sign-container input[type=text]:focus, .sign-container input[type=password]:focus ,.sign-container input[type=email]:focus , sign-container input[type=tel]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.sign-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius : 5px;
+}
+.sign-container .cancel {
+  background-color: red;
+}
+.sign-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.signup-popup button {
+	border-radius:5px;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.header, .browse, .browse-category, .profile, .profile-menu, .main-menu, .author, .year-book, .likes {
+  display: flex;
+  align-items: center;
+}
+
+.browse {
+	margin-right : 10px;
+}
+
+.main_visual {
+  display: flex;
+  flex-direction: column;
+ /* max-width: 1400px;
+  height: 100vh;*/
+  background-color: var(--page-bg-color);
+  margin: 0 auto;
+  overflow: hidden;
+ /* box-shadow: 0px 2px 50px 10px rgba(0, 0, 0, 0.21);*/
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--body-color-light);
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.search-bar input {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  padding: 0 10px 0 40px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%238b939c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' class='feather feather-search'%3e%3ccircle cx='11' cy='11' r='8'/%3e%3cpath d='M21 21l-4.35-4.35'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 15px 50%;
+  color: var(--body-color);
+  font-family: var(--body-font);
+}
+.search-bar input::placeholder {
+  color: var(--placeholder);
+}
+
+
+.header-title {
+  font-size: 260%;
+  font-weight: 400;
+  margin-left:0px;
+}
+.header-title span {
+  font-weight: 500;
+  color: var(--body-color);
+}
+
+.main_menu {
+	position:relative;
+	margin-left: 100px;
+	width: 45%;
+}
+
+.main_menu span {
+	font-weight:200;
+	font-size:160%;
+	width:100%;
+	height:100%;
+}
+.menu_pc, .menu_ps4, .menu_xbox  {
+	cursor : pointer;
+	margin-right: 17%;
+}
+.menu_switch {
+	cursor : pointer;
+}
+
+.main_menu span:hover {
+	color:black;
+	border-bottom:1px solid var(--body-color)
+}
+.footer {
+	text-align : center;
+	color: var(--placeholder);
+}
+.user-img {
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.user-profile {
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+}
+
+.profile {
+  flex-shrink: 0;
+}
+.profile-menu {
+  border-left: 1px solid var(--border-color);
+  margin-right: 15px
+}
+.profile svg {
+  width: 16px;
+  margin: 0 8px 0 15px;
+  flex-shrink: 0;
+}
+
+.login_button1{
+  text-align: center;
+  background:#e1e1e1;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100px;
+  padding: 8px;
+  border-radius: 20px;
+  cursor : pointer;
+}
+
+.login_button2{
+  text-align: center;
+  background:#e1e1e1;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100px;
+  padding: 8px;
+  border-radius: 20px;
+  cursor : pointer;
+}
+
+.logout_button{
+  text-align: center;
+  background:#e1e1e1;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100px;
+  padding: 8px;
+  border-radius: 20px;
+  cursor : pointer;
+}
+
+.login_text {
+	color:white;
+}
+
+.login_text:hover{
+	color:black;
+}
+
+.signup_text {
+	color : white;
+}
+.signup_text:hover {
+	color:black;
+}

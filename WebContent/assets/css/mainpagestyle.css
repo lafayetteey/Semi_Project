@@ -1,0 +1,745 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+:root {
+  --body-bg-color: #e5f4f9;
+  --body-color-light: #8b939c;
+  --body-font: "Roboto", sans-serif;
+  --page-bg-color: #f2f5f7;
+  --body-color: #3d4954;
+  --border-color: #b8bec3;
+  --placeholder: #ccd0d2; 
+}
+#seethedetail_reddead{
+	text-decoration: none;
+}
+/*로그인창팝업 시 뒷 배경 흐리게*/
+#mask {
+	position: absolute;
+	z-index: 9000;
+	background-color: #000;
+	display: none;
+	left: 0;
+	top: 0;
+}
+
+
+
+* {
+  outline: none;
+  box-sizing: border-box;
+  margin:0px;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.header, .browse, .browse-category, .profile, .profile-menu, .main-menu, .author, .year-book, .likes {
+  display: flex;
+  align-items: center;
+}
+
+.browse {
+	margin-right : 10px;
+}
+
+.main_visual {
+  display: flex;
+  flex-direction: column;
+ /* max-width: 1400px;
+  height: 100vh;*/
+  background-color: var(--page-bg-color);
+  margin: 0 auto;
+ /* box-shadow: 0px 2px 50px 10px rgba(0, 0, 0, 0.21);*/
+}
+
+
+.browse-category {
+  border-right: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+.browse-category svg {
+  width: 16px;
+  margin: 2px 10px 0 8px;
+}
+
+
+.footer {
+	text-align : center;
+	color: var(--placeholder);
+}
+
+
+.book-slide {
+  width: 100%;
+}
+
+.book {
+  background: #fff;
+}
+
+
+.book-cell {
+  position: relative;
+  display: flex;
+  padding: 25px;
+  width: 70%;
+  height: 480px;
+}
+
+
+.flickity-page-dots {
+  display: none;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #d6d6d6;
+}
+
+.flickity-prev-next-button svg {
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+.flickity-prev-next-button.previous {
+  left: 15px;
+}
+.flickity-prev-next-button.next {
+  right: 15px;
+}
+
+.flickity-viewport {
+  overflow: visible;
+}
+
+.book-photo {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  bottom: -35px;
+  left: 35px;
+  border-radius: 2px;
+  box-shadow: -2px 6px 19px 0px #7f818e;
+  transition: .3s ease;
+}
+.book-photo:hover {
+  transform: scale(1.03);
+}
+
+.book-img {
+  flex-shrink: 0;
+}
+
+
+
+.book-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.book-author {
+  margin-top: 3px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.book-content {
+  padding: 0 20px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+fieldset,
+label {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 0.5em;
+  margin: 10px;
+}
+
+.rating2 {
+  border: none;
+  display : none;
+}
+.rating {
+ border: none;
+}
+.circle2{
+	border-radius: 100%;
+    border: 5px solid #fc430a;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    background-color : #2e2e2e;
+}
+
+.circle_star2 {
+	font-size: 20px;
+    padding-top: 15%;
+    font-weight: bold;
+    color: white;
+    text-align : center;
+}
+
+
+.circle_box2 { 
+	margin-top: -26%;
+    margin-left: 35%;
+}
+
+
+
+.strong-man{
+/* 	margin-top:35%;
+	margin-left: -30%;
+	position: relative; */
+	float:left;
+}
+
+.maingame-vertical {
+   border-bottom: 1px solid white;
+   width: 100%;
+   margin-left: 1%;
+}
+
+.circle-wrap{
+	margin-top: 10px;
+}
+
+.circle-wrap2 {
+	width: 200px;
+	margin:0 auto;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  margin-right: 5px;
+  margin-top: 10px;
+  font-size: 0.9em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > label {
+  color: #fff;
+  float: right;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:checked,
+.rating:not(:checked) > label:checked ~ label {
+  color: #ff9700;
+}
+
+.rating > input:checked + label:checked,
+.rating > input:checked ~ label:checked,
+.rating > label:checked ~ input:checked ~ label,
+.rating > input:checked ~ label:checked ~ label {
+  color: #d85d61;
+}
+
+.blue > input:checked ~ label,
+.blue:not(:checked) > label:checked,
+.blue:not(:checked) > label:checked ~ label {
+  color: #458997;
+}
+
+.blue > input:checked + label:checked,
+.blue > input:checked ~ label:checked,
+.blue > label:checked ~ input:checked ~ label,
+.blue > input:checked ~ label:checked ~ label {
+  color: #458997;
+}
+
+.purple > input:checked ~ label,
+.purple:not(:checked) > label:checked,
+.purple:not(:checked) > label:checked ~ label {
+  color: #a76287;
+}
+
+.purple > input:checked + label:checked,
+.purple > input:checked ~ label:checked,
+.purple > label:checked ~ input:checked ~ label,
+.purple > input:checked ~ label:checked ~ label {
+  color: #a76287;
+}
+
+.yellow > input:checked ~ label,
+.yellow:not(:checked) > label:checked,
+.yellow:not(:checked) > label:checked ~ label {
+  color: #ffad58;
+}
+
+.yellow > input:checked + label:checked,
+.yellow > input:checked ~ label:checked,
+.yellow > label:checked ~ input:checked ~ label,
+.yellow > input:checked ~ label:checked ~ label {
+  color: #ffad58;
+}
+
+.dark-purp > input:checked ~ label,
+.dark-purp:not(:checked) > label:checked,
+.dark-purp:not(:checked) > label:checked ~ label {
+  color: #905587;
+}
+
+.dark-purp > input:checked + label:checked,
+.dark-purp > input:checked ~ label:checked,
+.dark-purp > label:checked ~ input:checked ~ label,
+.dark-purp > input:checked ~ label:checked ~ label {
+  color: #905587;
+}
+
+.book-voters {
+  color: #fff;
+  vertical-align: sub;
+  font-size: 13px;
+  margin-left: 7px;
+  white-space: nowrap;
+  margin-top: 7px;
+}
+
+.book-sum {
+  margin-top: 20px;
+  font-size: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+.book-see {
+  margin-top: 25px;
+  text-align: center;
+  background:rgba(0,0,0,0.3);
+  color: white;
+  font-weight: 600;
+  padding: 8px;
+  font-size: 14px;
+  width: 160px;
+  border-radius: 30px;
+}
+.book-see.book-blue {
+  color: #a4e0eb;
+}
+.book-see.book-blue:hover {
+  color: #22cdec;
+}
+.book-see.book-pink {
+  color: #edb9d6;
+}
+.book-see.book-pink:hover {
+  color: #ff6dbe;
+}
+.book-see.book-yellow {
+  color: #fdca95;
+}
+.book-see.book-yellow:hover {
+  color: #fb9124;
+}
+.book-see.book-purple {
+  color: #cbb5e2;
+}
+.book-see.book-purple:hover {
+  color: #a764ec;
+}
+
+.main-wrapper {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+.books-of {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-shrink: 0;
+}
+
+.popular-books {
+  flex-grow: 1;
+  padding: 0 30px 50px;
+  overflow-y: auto;
+}
+
+.genre {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.main-menu {
+  white-space: nowrap;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dcddde;
+  position: sticky;
+  top: 0;
+  right: 0;
+  background-color: var(--page-bg-color);
+  z-index: 2;
+}
+
+.book-types {
+  margin-left: auto;
+}
+.book-types a {
+  text-decoration: none;
+  color: var(--body-color);
+  font-size: 20px;
+}
+
+.book-type + .book-type {
+  margin-left: -10%;
+}
+
+.book-type {
+  position: relative;
+  transition: 0.2s;
+}
+.book-type.active, .book-type:hover {
+  -webkit-text-stroke: .3px;
+}
+.book-type.active:before, .book-type:hover:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  bottom: -17px;
+  right: 40px;
+  background-color: #67d4ea;
+  box-shadow: 0px -1px 5px 0px #67d4ea;
+}
+.book-type:nth-child(2):before {
+  left :1px
+}
+.book-type:nth-child(3):before {
+  right: 0px;
+}
+.book-type:nth-child(4):before {
+  right: 6px;
+}
+.book-type:nth-child(5):before {
+  right: 20px;
+}
+
+.week {
+  padding: 0 30px;
+}
+
+.author + .author {
+  margin-top: 20px;
+}
+.author-name {
+  font-size: 14px;
+  cursor : pointer;
+}
+.author:last-child {
+  margin-bottom: 40px;
+}
+
+.author-title {
+  padding: 0 0 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.author-img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.year-book-img {
+  width: 60px;
+  height: 60px;
+  margin-right: 16px;
+  
+}
+.year-book-name {
+  margin-bottom: 15px;
+  font-weight: 500;
+  cursor : pointer;
+  font-size : 13px;
+}
+.year-book-author {
+  font-size: 13px;
+}
+.year-book + .year-book {
+  margin-top: 20px;
+}
+
+.year-book-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.overlay {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 340px;
+  flex-shrink: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #f2f5f7 65%, #f2f5f7 100%);
+  height: 60px;
+  margin-left: -35px;
+}
+
+.book-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  padding-top: 40px;
+  position: relative;
+}
+
+.book-card {
+  margin-top: 20px;
+  background-color: #fff;
+  height: 270px;
+  box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0 0 20px 20px;
+  color: var(--body-color-light);
+}
+
+.book-card-img {
+  width: 200px;
+  height: 200px;
+  margin-top: -35px;
+  border-radius: 2px;
+  box-shadow: 0px 1px 7px 2px #c7c9d3;
+  border-bottom: 1px solid #dcddde;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: .3s ease;
+}
+.book-card-img:hover {
+  transform: scale(1.04);
+}
+
+.card-content {
+  color: var(--body-color);
+  padding: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.book-name {
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.book-by {
+  font-size: 13px;
+  color: var(--body-color-light);
+  margin-top: 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.book-rate > label {
+  color: #cccccc;
+}
+
+.rate {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.book-rate > input:checked ~ label,
+.book-rate:not(:checked) > label:checked,
+.book-rate:not(:checked) > label:checked ~ label {
+  color: #ff9700;
+}
+
+.book-rate > input:checked + label:checked,
+.book-rate > input:checked ~ label:checked,
+.book-rate > label:checked ~ input:checked ~ label,
+.book-rate > input:checked ~ label:checked ~ label {
+  color: #ff9700;
+}
+
+.card-vote {
+  color: var(--body-color-light);
+}
+
+.card-sum {
+  color: var(--body-color-light);
+  font-size: 13px;
+  line-height: 1.6em;
+  -webkit-line-clamp: 4;
+  margin-top: 15px;
+}
+
+.content-wrapper {
+  display: flex;
+  border-bottom: 1px solid #ebedef;
+  position: relative;
+}
+.content-wrapper:before {
+  content: "";
+  position: absolute;
+  background-color: #8f98a9;
+  background-color: #aaaebc;
+  box-shadow: 0 -6px 0 0 #aaaebc, 0 6px 0 0 #aaaebc;
+  width: 4px;
+  height: 4px;
+  border: 0;
+  padding: 0;
+  right: 12px;
+  top: 17px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.like-profile {
+  margin-top: 8px;
+}
+.like-profile + .like-profile {
+  margin-left: -5px;
+}
+
+.like-img {
+  border-radius: 50%;
+  width: 28px;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.like-name {
+  font-size: 13px;
+  margin-left: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.like-name>span {
+  font-weight: 600;
+}
+
+@media (max-width: 1103px) {
+  .book-cell {
+    width: 60%;
+    
+  }
+}
+@media (max-width: 765xp) {
+  .book-cell {
+    width: 80%;
+  }
+}
+@media (max-width: 575px) {
+  .book-cell {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .book-cell {
+    width: 100%;
+  }
+}
+@media (max-width: 458px) {
+  .book-photo {
+    width: 180px;
+  }
+
+  .book-voters {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .book-see {
+    width: 120px;
+    font-size: 13px;
+  }
+
+  .book-photo {
+    width: 130px;
+  }
+
+  .main-wrapper {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 360px) {
+  .rating > label:before {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 1220px) {
+  .card-vote {
+    display: none;
+  }
+}
+@media (max-width: 1085px) {
+  .book-rate > label {
+    font-size: .7em;
+  }
+}
+@media (max-width: 1045px) {
+  .books-of {
+    display: none;
+  }
+}
+@media (max-width: 725px) {
+  .wse-category, .search-bar {
+    display: none;
+  }
+
+  .header-title {
+    margin-right: auto;
+  }
+
+  .book-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .book-types {
+    display: none;
+  }
+}
+@media (max-width: 372px) {
+  .card-content {
+    padding: 20px;
+  }
+}
